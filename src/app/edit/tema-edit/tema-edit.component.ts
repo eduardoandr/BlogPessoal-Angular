@@ -20,6 +20,8 @@ export class TemaEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+    this.temaService.refreshToken()
     if(environment.token == ""){
       this.router.navigate(["/entrar"])
     }
